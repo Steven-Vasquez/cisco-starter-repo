@@ -1,25 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{backgroundColor:"CadetBlue", padding:"1rem"}}>
+        <Banner />
+      </div>
+      <Exhibit 
+        title="Child Components displayed below"/>
     </div>
   );
+}
+
+function Banner() {
+  return (
+    <h2 alt="Website Title">Connection Tester</h2>
+  );
+}
+
+function Exhibit(props){
+  return(
+    <div>
+      <header>
+        <h1>{props.title}</h1>
+      </header>
+      {props.children}
+    </div>
+  )
 }
 
 export default App;
