@@ -5,7 +5,6 @@ class DisplayIP extends Component {
         super(props);
         this.state = {ip: ""};
     }
-
     
     // Gets called after the component has been rendered to the DOM for the first time
     // We only need to use this, not also componentDidUpdate, because IP addresses should be static
@@ -23,9 +22,9 @@ class DisplayIP extends Component {
     }
     render()  {
         return(
-            <div>
+            <span>
                 My public IP addres is: {this.state.ip}
-            </div>
+            </span>
         )
     }
 }
